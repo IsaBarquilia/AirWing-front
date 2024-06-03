@@ -1,7 +1,9 @@
 import React from 'react'
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
 import styles from './style'
 import EasyNavegation from '../../components/EasyNavegation'
+import NewFooter from '../../components/NewFooter'
 
 export default function Termos() {
     return (
@@ -55,6 +57,7 @@ export default function Termos() {
                     </View>
 
                 </View>
+                <NewFooter />
             </ScrollView>
         </View>
     )

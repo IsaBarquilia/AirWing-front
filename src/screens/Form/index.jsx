@@ -83,53 +83,14 @@ export default function Form() {
         <TextInput style={styles.input} placeholder="Nome Completo" onChangeText={setName} value={name} />
         <TextInput style={styles.input} placeholder="Ano de Nascimento" onChangeText={setBirthYear} value={birthYear} />
         <TextInput style={styles.input} placeholder="Email" onChangeText={setEmail} value={email} />
-        <TextInputMask
-          style={styles.input}
-          placeholder={"CPF"}
-          type={"cpf"}
-          value={cpf}
-          onChangeText={setCpf}
-        />
-        <TextInputMask
-          style={styles.input}
-          placeholder="Telefone"
-          type={"cel-phone"}
-          options={{
-            maskType: 'BRL',
-            withDDD: true,
-            dddMask: '(99) ',
-          }}
-          value={phone}
-          onChangeText={setPhone}
-        />
-        <RadioButton
-        value="M"
-        status={ checked === 'M' ? 'checked' : 'unchecked' }
-        onPress={() => {
-          setChecked('M');
-          sexpassage('M');
-        }
-        }
-      />
-      <Text>Macho</Text>
-      <RadioButton
-        value="F"
-        status={ checked === 'F' ? 'checked' : 'unchecked' }
-        onPress={() => {
-          setChecked('F');
-          sexpassage('F');
-        }
-        }
-      />
       <Text>Femea</Text>
         <View style={styles.passwordarea}>
           <TextInput style={styles.inputsenha} placeholder="Senha" secureTextEntry={showPassword} onChangeText={setPassword} value={password} />
           <TouchableOpacity onPress={showHidePassword} style={styles.button}>
-            <Icon name={showPassword ? "lock" : "lock-open"} />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={handleUser} style={styles.button} >
-          <Icon name={"lock"} />
+        <TouchableOpacity onPress={handleUser} style={styles.button2} >
+
         </TouchableOpacity>
         {
           popUp && <Text style={styles.popUp}>Usuário cadastrado com sucesso!</Text>
@@ -140,4 +101,3 @@ export default function Form() {
     </View>
   );
 }
-

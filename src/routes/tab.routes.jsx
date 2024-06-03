@@ -3,30 +3,14 @@ import { Feather } from "@expo/vector-icons";
 
 import Category from "../screens/Category";
 import { user } from "../data/Profile";
-import Hoteis from "../screens/Hoteis";
+
 
 const Tab = createBottomTabNavigator();
 
 const TabRoutes = () => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen
-        name="Profile"
-        component={Hoteis}
-        initialParams={{ data: user }}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Feather
-              name="user"
-              size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
-            />
-          ),
-          tabBarLabel: "Perfil",
-          tabBarActiveTintColor: "#131313",
-          tabBarInactiveTintColor: "#D6D6D6",
-        }}
-      />
+      
       
 
       <Tab.Screen
